@@ -1,0 +1,27 @@
+type Role {
+  id: ID!
+  name: String!
+  projectID: ID!
+  users: [User!]!
+}
+
+input NewRole {
+  name: String!
+  projectID: ID!
+}
+
+input InputRole {
+  name: String!
+  users: [ID!]!
+}
+
+extend type Query {
+  getRole(roleID: ID!): Role!
+  getRoles: [Role!]!
+}
+
+extend type Mutation {
+  createRole(input: NewRole!): Role!
+  udpateRole(input: InputRole!): Role!
+  deleteRole(roleID: ID!): Role!
+}
