@@ -1,5 +1,6 @@
 # dabids
-This project aim to create an application which permit searcher to store and share their data while being able to run analysis script on their data.
+This project aime to give an example of using go with graphql
+
 
 curl -X POST -d 'username=admin&password=password' http://localhost:8080/login
 curl -g -X POST -H "Content-Type: application/json" -d '{"query": "query{hello}"}' localhost:8080/graphql
